@@ -1,0 +1,34 @@
+'''
+def insertion_sort(list):
+    for i in range(1,len(list)):
+        temp=list[i]
+        j=i-1
+        while(j>=0):
+            if(list[j]>temp):
+                list[j+1]=list[j]
+                list[j]=temp
+                j=j-1
+            else:
+                break
+
+list=[5,8,1,9,2]
+print("before sorting",list)
+insertion_sort(list)                
+print(list)
+'''
+def insertion_sort(list):
+    for i in range(1,len(list)):
+        temp=list[i]
+        j=i-1
+        while(j>=0 and list[j]>temp):
+            list[j+1]=list[j]
+            j=j-1
+        list[j+1]=temp
+list=[5,8,1,9,2]
+print("before sorting",list)
+insertion_sort(list)                
+print(list)
+
+
+
+
